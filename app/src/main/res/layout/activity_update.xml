@@ -1,0 +1,213 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UpdateActivity">
+
+    <RelativeLayout
+        android:id="@+id/updateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:background="@drawable/gradient_bg1">
+
+        <ImageView
+            android:id="@+id/update_backButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_back"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/update_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/update_backButton"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Update Profile"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateLayout">
+
+        <RelativeLayout
+            android:id="@+id/updateBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/updateToolBar"
+            android:layout_marginTop="10dp"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/updateName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:boxStrokeColor="#FF0303"
+                app:hintTextColor="#FF0303"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:errorTextColor="@color/red"
+                app:helperText="Eg: Sam Clark">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Full Name"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/updatePhonenumer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/updateName"
+                android:layout_marginTop="10dp"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:errorTextColor="@color/red"
+                app:boxStrokeColor="#FF0303"
+                app:hintTextColor="#FF0303"
+                app:helperText="Eg: 957606400">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Phone Number"
+                    android:inputType="phone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/updatePassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/updatePhonenumer"
+                android:layout_marginTop="10dp"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:errorTextColor="@color/red"
+                app:passwordToggleEnabled="true"
+                app:boxStrokeColor="#FF0303"
+                app:hintTextColor="#FF0303"
+                app:helperText="Eg: Abcd@1234">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Create Password"
+                    android:inputType="textPassword"
+                    app:passwordToggleEnabled="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/updateConfirmPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/updatePassword"
+                android:layout_marginTop="10dp"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:passwordToggleEnabled="true"
+                app:boxStrokeColor="#FF0303"
+                app:hintTextColor="#FF0303"
+                app:errorTextColor="@color/red"
+                app:helperText="Type password again">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    app:passwordToggleEnabled="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/registerConfirmPassword"
+                android:id="@+id/stateSection"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:text="State :"
+                    android:textColor="@color/black"
+                    android:textSize="17.01dp"/>
+
+                <Spinner
+                    android:id="@+id/stateSpinner"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:foreground="@drawable/country_code"
+                    android:layout_marginLeft="10dp">
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stateSection"
+                android:id="@+id/citySection"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:text="City :"
+                    android:textColor="@color/black"
+                    android:textSize="17.01dp"/>
+
+                <Spinner
+                    android:id="@+id/citySpinner"
+                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:foreground="@drawable/country_code"
+                    android:layout_marginLeft="20dp">
+                </Spinner>
+
+            </LinearLayout>-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/updateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/updateConfirmPassword"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_button"
+                android:text="Update Profile"
+                android:textAllCaps="false"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

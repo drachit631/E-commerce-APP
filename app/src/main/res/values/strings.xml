@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Internship Day 2</string>
+    <string name="create_acc">Create Account</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Enter Email</string>
+    <string name="password_dis">At least 1 special character, no white spaces and at least 4 characters</string>
+    <string name="open">Open Drawer</string>
+    <string name="close">Close Drawer</string>
+    <string name="search">Search category/Product</string>
+</resources>
